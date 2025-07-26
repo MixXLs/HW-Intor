@@ -1,0 +1,137 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  padding: 40px; /* ระยะห่างรอบขอบของหน้าทั้งหมด */
+  line-height: 1.6; /* ความสูงของบรรทัด */
+}
+h1{
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px; /* ระยะห่างด้านล่างของหัวข้อ */
+  font-size: 2em; /* ขนาดฟอนต์ใหญ่เป็น 2 เท่า*/
+  border-bottom: 3px solid #0063a5 ; /* เส้นใต้หัวข้อ หนา 3px */
+  padding-bottom: 10px; /* เว้นช่องว่างระหว่างข้อความกับเส้นใต้ */
+}
+p{
+  background-color: #fff;
+  padding: 15px 20px; /* ระยะห่างภายในกล่อง (15px บน-ล่าง, 20px ซ้าย-ขวา) */
+  margin-bottom: 15px; /* ระยะห่างระหว่างย่อหน้า */
+  border-left: 5px solid #007ACC; /* เส้นขอบซ้าย*/
+  box-shadow:0 2px 5px; /* เงาด้านล่าง */
+  border-radius: 6px; /* มุมกล่องมน 6px */
+}
+p strong{
+  display: inline;
+  width: 200px;
+  color:#1f4e79
+}
+.gallery {
+  display: flex; /* จัดรูปภาพให้อยู่ในแถวเดียว (แนวนอน) */
+  gap: 20px; /* ระยะห่างระหว่างแต่ละรูป */
+  margin-top: 20px;/* เว้นระยะด้านบน */
+  flex-wrap: wrap; /* ถ้าหน้าจอเล็กให้ขึ้นบรรทัดใหม่อัตโนมัติ */
+}
+
+.gallery img {
+  width: 200px;
+  object-fit: cover; /* ปรับภาพให้เต็มกรอบ โดยไม่ยืด */
+  border-radius: 8px; /* มุมรูปภาพโค้งมน */
+  box-shadow: 0 2px 6px ; /* เงาอ่อนรอบภาพ*/
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.103)
+}
+th, td{
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cccccc5d;
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: #b0bec54b;
+  font-weight: normal;
+}
+.bold{
+  font-weight: bold;
+}
+.subject {
+    position: relative;
+    border: 2px solid;
+    color: #333; 
+}
+
+.subject::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+}
+
+.color1 {
+    background-color: #fdf8e7;
+    border-color: #f5b400;
+}
+.color1::before {
+    background-color: #f5b400;
+}
+
+.color2 {
+    background-color: #ffeff6;
+    border-color: #e64898;
+}
+.color2::before {
+    background-color: #e64898;
+}
+
+.color3 {
+    background-color: #eaf9fe;
+    border-color: #00b2e1;
+}
+.color3::before {
+    background-color: #00b2e1;
+}
+
+.day {
+  position: relative;
+  background-color: #f9f9f9;
+  font-weight: bold;
+  padding-left: 12px;
+}
+.day::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+}
+.monday::before {
+  background-color: #f5b400;
+}
+.tuesday::before {
+  background-color: #e64898;
+}
+.wednesday::before {
+  background-color: #7fc144;
+}
+.thursday::before {
+  background-color: #ff9800;
+}
+.friday::before {
+  background-color: #00b2e1;
+}
+.saturday::before {
+  background-color: #d1a1f7;
+}
+.sunday::before {
+  background-color: #d32f2f;
+}

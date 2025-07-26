@@ -28,12 +28,14 @@ p strong{
 }
 .gallery {
   display: flex; /* จัดรูปภาพให้อยู่ในแถวเดียว (แนวนอน) */
+  justify-content: center;
   gap: 20px; /* ระยะห่างระหว่างแต่ละรูป */
   margin-top: 20px;/* เว้นระยะด้านบน */
   flex-wrap: wrap; /* ถ้าหน้าจอเล็กให้ขึ้นบรรทัดใหม่อัตโนมัติ */
 }
 
 .gallery img {
+
   width: 200px;
   object-fit: cover; /* ปรับภาพให้เต็มกรอบ โดยไม่ยืด */
   border-radius: 8px; /* มุมรูปภาพโค้งมน */
@@ -41,44 +43,44 @@ p strong{
 }
 table{
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+  border-collapse: collapse;   /* รวมเส้นขอบไม่ให้ซ้อนกัน */
+  margin-top: 20px; /* เว้นระยะด้านบนของตาราง */
   background: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.103)
 }
 th, td{
-  width: 50px;
-  height: 50px;
-  border: 1px solid #cccccc5d;
+  width: 50px;  /* กำหนดความกว้างของแต่ละเซลล์ */
+  height: 50px; /* กำหนดความสูงของแต่ละเซลล์ */
+  border: 1px solid #cccccc5d; /* เส้นขอบ */
   text-align: center;
-  padding: 10px;
+  padding: 10px; /* เพิ่มระยะห่างในเซลล์ */
 }
 
 th {
   background-color: #b0bec54b;
-  font-weight: normal;
+  font-weight: normal; /*ตัวฟอนต์ธรรมดา */
 }
 .bold{
   font-weight: bold;
 }
 .subject {
-    position: relative;
-    border: 2px solid;
+    position: relative; /* ใช้สำหรับจัดวาง ::before ด้านใน */
+    border: 2px solid; /* เส้นขอบหนา  */
     color: #333; 
 }
 
 .subject::before {
-    content: "";
-    position: absolute;
+    content: ""; /* ไม่ใส่ข้อความ */
+    position: absolute; /* วางทับตำแหน่งในเซลล์ */
     top: 0;
     left: 0;
-    width: 6px;
-    height: 100%;
+    width: 6px; /* ความกว้างของแถบ */
+    height: 100%; /* ความสูงเต็มเซลล์ */
 }
 
 .color1 {
     background-color: #fdf8e7;
-    border-color: #f5b400;
+    border-color: #f5b400; /* สีของเส้นขอบ */
 }
 .color1::before {
     background-color: #f5b400;
@@ -86,7 +88,7 @@ th {
 
 .color2 {
     background-color: #ffeff6;
-    border-color: #e64898;
+    border-color: #e64898; /* สีของเส้นขอบ */
 }
 .color2::before {
     background-color: #e64898;
@@ -94,21 +96,21 @@ th {
 
 .color3 {
     background-color: #eaf9fe;
-    border-color: #00b2e1;
+    border-color: #00b2e1; /* สีของเส้นขอบ */
 }
 .color3::before {
     background-color: #00b2e1;
 }
 
 .day {
-  position: relative;
-  background-color: #f9f9f9;
+  position: relative; /* สำหรับจัดวางแถบสีซ้าย */
+  background-color: #f9f9f9; 
   font-weight: bold;
-  padding-left: 12px;
+  padding-left: 12px; /* กำหนดระยะห่างด้านซ้าย */
 }
 .day::before {
   content: "";
-  position: absolute;
+  position: absolute; /* วางทับตำแหน่งในเซลล์ */
   top: 0;
   left: 0;
   width: 5px;

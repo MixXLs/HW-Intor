@@ -69,7 +69,7 @@ th {
     color: #333; 
 }
 
-.subject::before {
+.subject::before { /*แทรก "เนื้อหาเสมือน" ก่อนเนื้อหาหลักของ/*
     content: ""; /* ไม่ใส่ข้อความ */
     position: absolute; /* วางทับตำแหน่งในเซลล์ */
     top: 0;
@@ -108,7 +108,7 @@ th {
   font-weight: bold;
   padding-left: 12px; /* กำหนดระยะห่างด้านซ้าย */
 }
-.day::before {
+.day::before { /*แทรก "เนื้อหาเสมือน" ก่อนเนื้อหาหลัก/*
   content: "";
   position: absolute; /* วางทับตำแหน่งในเซลล์ */
   top: 0;
